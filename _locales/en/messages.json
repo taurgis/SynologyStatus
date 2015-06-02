@@ -1,0 +1,18 @@
+{
+  "appDescription" : {"message":"This extension shows basic status information about your Synology NAS."},
+  "serverPlaceholder": { "message":"IP:port / QuickConnect ID"},
+  "usernamePlaceholder": { "message":"Username"},
+  "passwordPlaceholder": { "message":"Password"},
+  "createdBy": { "message":"Created by "},
+  "connect": { "message":"CONNECT"},
+  "cpu": { "message":"PROCESSOR"},
+  "memory": { "message":"MEMORY"},
+  "disk": { "message":"DISK"},
+  "model": { "message":"Model"},
+  "version": { "message":"Version"},
+  "temperature": { "message":"Temperature"},
+  "loginError": { "message":"Error logging in!"},
+  "logout": { "message":"LOGOUT" },
+  "welcome" : { "message" : "Welcome "}
+
+}

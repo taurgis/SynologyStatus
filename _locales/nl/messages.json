@@ -1,0 +1,18 @@
+{
+  "appDescription" : {"message":"Deze extensie toont basis informatie over je Synology NAS."},
+  "serverPlaceholder": { "message":"IP:poort / QuickConnect ID"},
+  "usernamePlaceholder": { "message":"Gebruikersnaam"},
+  "passwordPlaceholder": { "message":"Paswoord"},
+  "createdBy": { "message":"Gemaakt door "},
+  "connect": { "message":"VERBINDEN"},
+  "cpu": { "message":"PROCESSOR"},
+  "memory": { "message":"GEHEUGEN"},
+  "disk": { "message":"HARDE SCHIJF"},
+  "model": { "message":"Model"},
+  "version": { "message":"Versie"},
+  "temperature": { "message":"Temperatuur"},
+  "loginError": { "message":"Error bij het inloggen!"},
+  "logout": { "message":"UITLOGGEN" },
+  "welcome" : { "message" : "Welkom "}
+
+}
