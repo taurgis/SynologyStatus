@@ -1,6 +1,6 @@
 {
   "appDescription" : {"message":"Deze extensie toont basis informatie over je Synology NAS."},
-  "serverPlaceholder": { "message":"IP:poort / QuickConnect ID"},
+  "serverPlaceholder": { "message":"IP/URL:poort"},
   "usernamePlaceholder": { "message":"Gebruikersnaam"},
   "passwordPlaceholder": { "message":"Paswoord"},
   "createdBy": { "message":"Gemaakt door "},
