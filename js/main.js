@@ -50,8 +50,8 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
         $('.dsm-info').hide();
         $('.logged-in-panel').hide();
 
-        chrome.storage.sync.get('username', function(result) {
-            if (result.username) {
+        chrome.storage.sync.get(['username', 'password', 'server', 'ssl'], function(result) {
+            if (result.username && result.password) {
                 $('.login-panel').hide();
                 $('.loader').show();
                 $('.logged-in-panel').show();
@@ -62,12 +62,20 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
             } else {
                 $('.logged-in-panel').hide();
                 $('.login-panel').show();
+
+                $('#login-form').find('#username').val(result.username);
+                $('#login-form').find('#server').val(result.server);
+                if (result.ssl) {
+                    $('#login-form').find('#ssl').prop('checked', true);
+                } else {
+                    $('#login-form').find('#ssl').prop('checked', false);
+                }
             }
         });
     }
 
     function logout() {
-        chrome.storage.sync.remove('username', function() {
+        chrome.storage.sync.remove('password', function() {
             location.reload();
         });
     }
