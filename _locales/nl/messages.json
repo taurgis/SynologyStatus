@@ -1,18 +1,59 @@
 {
-  "appDescription" : {"message":"Deze extensie toont basis informatie over je Synology NAS."},
-  "serverPlaceholder": { "message":"IP/URL:poort"},
-  "usernamePlaceholder": { "message":"Gebruikersnaam"},
-  "passwordPlaceholder": { "message":"Paswoord"},
-  "createdBy": { "message":"Gemaakt door "},
-  "connect": { "message":"VERBINDEN"},
-  "cpu": { "message":"PROCESSOR"},
-  "memory": { "message":"GEHEUGEN"},
-  "disk": { "message":"HARDE SCHIJF"},
-  "model": { "message":"Model"},
-  "version": { "message":"Versie"},
-  "temperature": { "message":"Temperatuur"},
-  "loginError": { "message":"Error bij het inloggen!"},
-  "logout": { "message":"UITLOGGEN" },
-  "welcome" : { "message" : "Welkom "}
-
+    "appDescription": {
+        "message": "Deze extensie toont basis informatie over je Synology NAS."
+    },
+    "serverPlaceholder": {
+        "message": "IP/URL:poort"
+    },
+    "usernamePlaceholder": {
+        "message": "Gebruikersnaam"
+    },
+    "passwordPlaceholder": {
+        "message": "Paswoord"
+    },
+    "createdBy": {
+        "message": "Gemaakt door "
+    },
+    "connect": {
+        "message": "VERBINDEN"
+    },
+    "cpu": {
+        "message": "PROCESSOR"
+    },
+    "memory": {
+        "message": "GEHEUGEN"
+    },
+    "disk": {
+        "message": "HARDE SCHIJF"
+    },
+    "model": {
+        "message": "Model"
+    },
+    "uptime": {
+        "message": "Uptime"
+    },
+    "temperature": {
+        "message": "Temperatuur"
+    },
+    "loginError": {
+        "message": "Error bij het inloggen!"
+    },
+    "logout": {
+        "message": "UITLOGGEN"
+    },
+    "welcome": {
+        "message": "Welkom "
+    },
+    "hours": {
+        "message": "uren "
+    },
+    "minutes": {
+        "message": "minuten "
+    },
+    "seconds": {
+        "message": "seconden "
+    },
+    "diskUsage": {
+        "message": "Harde schijf ruimte"
+    }
 }

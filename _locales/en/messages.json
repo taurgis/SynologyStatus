@@ -1,18 +1,59 @@
 {
-  "appDescription" : {"message":"This extension shows basic status information about your Synology NAS."},
-  "serverPlaceholder": { "message":"IP/URL:port"},
-  "usernamePlaceholder": { "message":"Username"},
-  "passwordPlaceholder": { "message":"Password"},
-  "createdBy": { "message":"Created by "},
-  "connect": { "message":"CONNECT"},
-  "cpu": { "message":"PROCESSOR"},
-  "memory": { "message":"MEMORY"},
-  "disk": { "message":"DISK"},
-  "model": { "message":"Model"},
-  "version": { "message":"Version"},
-  "temperature": { "message":"Temperature"},
-  "loginError": { "message":"Error logging in!"},
-  "logout": { "message":"LOGOUT" },
-  "welcome" : { "message" : "Welcome "}
-
+    "appDescription": {
+        "message": "This extension shows basic status information about your Synology NAS."
+    },
+    "serverPlaceholder": {
+        "message": "IP/URL:port"
+    },
+    "usernamePlaceholder": {
+        "message": "Username"
+    },
+    "passwordPlaceholder": {
+        "message": "Password"
+    },
+    "createdBy": {
+        "message": "Created by "
+    },
+    "connect": {
+        "message": "CONNECT"
+    },
+    "cpu": {
+        "message": "PROCESSOR"
+    },
+    "memory": {
+        "message": "MEMORY"
+    },
+    "disk": {
+        "message": "DISK"
+    },
+    "model": {
+        "message": "Model"
+    },
+    "uptime": {
+        "message": "Uptime"
+    },
+    "temperature": {
+        "message": "Temperature"
+    },
+    "loginError": {
+        "message": "Error logging in!"
+    },
+    "logout": {
+        "message": "LOGOUT"
+    },
+    "welcome": {
+        "message": "Welcome "
+    },
+    "hours": {
+        "message": "hours "
+    },
+    "minutes": {
+        "message": "minutes "
+    },
+    "seconds": {
+        "message": "seconds "
+    },
+    "diskUsage": {
+        "message": "Disk usage"
+    }
 }
