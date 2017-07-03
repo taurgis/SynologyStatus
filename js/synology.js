@@ -22,7 +22,7 @@ define(["vendor/quickconnectid.min"], function() {
         });
     },
     startFetchDSMData: function(baseUrl) {
-      $.get(baseUrl + "/webman/modules/SystemInfoApp/SystemInfo.cgi?_dc=1499022065422&query=systemHealth", function(data) {
+      $.get(baseUrl + "/webman/modules/SystemInfoApp/SystemInfo.cgi?query=systemHealth", function(data) {
         var infoResult = JSON.parse(data);
 
         if (infoResult.disks) {

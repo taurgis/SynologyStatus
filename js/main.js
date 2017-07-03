@@ -1,6 +1,4 @@
 requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(Synology) {
-  var ticker;
-
   $(document).ready(function() {
     doTranslation();
     reloadMain();
