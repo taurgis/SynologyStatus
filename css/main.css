@@ -123,6 +123,8 @@ body {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
+    bottom: 21px;
+    left: 20px;
 }
 
 .tooltip:hover .tooltiptext {
