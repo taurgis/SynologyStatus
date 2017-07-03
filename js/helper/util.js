@@ -29,6 +29,6 @@ function doTranslation() {
 
 function showError(message) {
   $('.logged-in-panel .alert').addClass('alert-danger');
-  $('.logged-in-panel .alert .text').text(message);
+  $('.logged-in-panel .alert .text').html(message);
   $('.logged-in-panel .alert').show();
 }

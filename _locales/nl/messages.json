@@ -3,7 +3,7 @@
         "message": "Deze extensie toont basis informatie over je Synology NAS."
     },
     "serverPlaceholder": {
-        "message": "IP/URL:poort"
+        "message": "IP/HOST:port of Quickconnect ID (experimenteel)"
     },
     "usernamePlaceholder": {
         "message": "Gebruikersnaam"

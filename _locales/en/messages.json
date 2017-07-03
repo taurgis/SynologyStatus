@@ -3,7 +3,7 @@
         "message": "This extension shows basic status information about your Synology NAS."
     },
     "serverPlaceholder": {
-        "message": "IP/URL:port"
+        "message": "IP/HOST:port or Quickconnect ID (experimental)"
     },
     "usernamePlaceholder": {
         "message": "Username"
