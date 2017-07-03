@@ -55,5 +55,8 @@
     },
     "diskUsage": {
         "message": "Harde schijf ruimte"
+    },
+    "sslWarningMessage": {
+      "message": "Info: Wanneer U SSL gebruikt zonder een correct certificaat or wanneer u een IP invult ipv het domein (met een geldig certificaat) dient u eerst het IP manueel te bezoeken en <a style='color:darkseagreen;' href='https://github.com/taurgis/SynologyStatus/wiki/Unsafe-error' target='_blank'>'onveilige paginas'</a> toe te staan alvorens deze extensie zal werken."
     }
 }

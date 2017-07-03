@@ -55,5 +55,8 @@
     },
     "diskUsage": {
         "message": "Disk usage"
+    },
+    "sslWarningMessage": {
+      "message": "Note: When using SSL without a valid certificate or without a valid domain entered in the domain/ip field you need to open the IP in your browser first and allow <a style='color:darkseagreen;' href='https://github.com/taurgis/SynologyStatus/wiki/Unsafe-error' target='_blank'>'insecure requests'</a> before this extension will work!"
     }
 }

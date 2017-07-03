@@ -18,7 +18,7 @@ function validateUrl(value) {
 function doTranslation() {
   $("[data-translation]").each(function(index) {
     var translation = chrome.i18n.getMessage($(this).data('translation'));
-    $(this).text(translation);
+    $(this).html(translation);
   });
 
   $("[data-translation-placeholder]").each(function(index) {
