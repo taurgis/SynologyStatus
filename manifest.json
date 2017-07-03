@@ -3,13 +3,18 @@
 
   "name": "Synology Status",
   "description": "__MSG_appDescription__",
-  "version": "0.21",
+  "version": "0.22",
   "default_locale": "en",
   "author": "Thomas Theunen",
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com 'unsafe-eval'; object-src 'self'",
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "images/icons/icon.png",
     "default_popup": "information.html"
+  },
+  "icons": {
+    "16": "images/icons/icon16.png",
+    "48": "images/icons/icon48.png",
+    "128": "images/icons/icon128.png"
   },
   "permissions": [
     "storage",
