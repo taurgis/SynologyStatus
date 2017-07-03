@@ -1,8 +1,13 @@
-function getBaseUrl(server, ssl) {
+function getBaseUrl(server, ssl, success, failure) {
   if (validateUrl(server)) {
-    return (ssl ? "https" : "http") + "://" + server;
+    done((ssl ? "https" : "http") + "://" + server);
   } else {
-    return (ssl ? "https" : "http") + "://" + server + ".uk.quickconnect.to";
+    var quickConnect = new QuickConnect(server);
+    quickConnect.determineServerURL(function(url) {
+      success(url);
+    }, function(error) {
+      failure(error)
+    });
   }
 }
 
