@@ -7,13 +7,6 @@ body {
     margin-top: 2px;
 }
 
-.dsmprocessor, .dsmmemory, .dsmdisk {
-    position: absolute;
-    top: 49px;
-    left: 62px;
-    font-weight: bold;
-}
-
 .loader {
     position: relative;
     margin: 0px auto;
