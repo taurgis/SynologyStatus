@@ -1,125 +1,135 @@
 body {
-    width: 400px;
-    min-height: 175px;
+  width: 400px;
+  min-height: 175px;
 }
 
 .logged-in-as {
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 .loader {
-    position: relative;
-    margin: 0px auto;
-    width: 100px;
-    height: 100px;
+  position: relative;
+  margin: 0px auto;
+  width: 160px;
+  height: 100px;
+  text-align:center;
+}
+
+#loadingMessage {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  bottom: 30px;
+  width: 160px;
 }
 
 .circular {
-    -webkit-animation: rotate 2s linear infinite;
-    animation: rotate 2s linear infinite;
-    height: 100px;
-    position: relative;
-    width: 100px;
-    margin-top: -25px;
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  height: 100px;
+  position: relative;
+  width: 100px;
+  margin-top: -25px;
 }
 
 .path {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-    stroke-linecap: round;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
 }
 
 @-webkit-keyframes rotate {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes dash {
-    0% {
-        stroke-dasharray: 1, 200;
-        stroke-dashoffset: 0;
-    }
-    50% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -35;
-    }
-    100% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -124;
-    }
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
 }
 
 @keyframes dash {
-    0% {
-        stroke-dasharray: 1, 200;
-        stroke-dashoffset: 0;
-    }
-    50% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -35;
-    }
-    100% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -124;
-    }
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
 }
 
 @-webkit-keyframes color {
-    100%, 0% {
-        stroke: #d62d20;
-    }
-    40% {
-        stroke: #0057e7;
-    }
-    66% {
-        stroke: #008744;
-    }
-    80%, 90% {
-        stroke: #ffa700;
-    }
+  100%, 0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
 }
 
 @keyframes color {
-    100%, 0% {
-        stroke: #d62d20;
-    }
-    40% {
-        stroke: #0057e7;
-    }
-    66% {
-        stroke: #008744;
-    }
-    80%, 90% {
-        stroke: #ffa700;
-    }
+  100%, 0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 220px;
-    background-color: rgba(101, 101, 101, 0.9);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    bottom: 21px;
-    left: 20px;
+  visibility: hidden;
+  width: 220px;
+  background-color: rgba(101, 101, 101, 0.9);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 21px;
+  left: 20px;
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+  visibility: visible;
 }

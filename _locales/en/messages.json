@@ -11,6 +11,12 @@
     "passwordPlaceholder": {
         "message": "Password"
     },
+    "authenticating" : {
+        "message": "authenticating"
+    },
+    "loadingNasInfo" : {
+        "message": "loading nas info"
+    },
     "createdBy": {
         "message": "Created by "
     },

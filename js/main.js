@@ -69,7 +69,9 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
   }
 
   function loginAndLoadDSMData(username, password, server, ssl) {
+    $('#loadingMessage').text(chrome.i18n.getMessage("authenticating"));
     Synology.authenticate(username, password, server, ssl, function(baseUrl) {
+        $('#loadingMessage').text(chrome.i18n.getMessage("loadingNasInfo"));
       loadDSMData(baseUrl);
     }, function(errorMessage) {
       $('.loader').hide();
@@ -106,7 +108,7 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
 
       $('.dsm-info').show();
       $('.loader').hide();
-      
+
       _gaq.push(['_trackPageview', '/refresh.html']);
 
       setTimeout(loadDSMData, 5000, baseUrl);
