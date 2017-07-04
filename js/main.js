@@ -13,21 +13,14 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
       var ssl = $('#login-form').find('#ssl').prop('checked');
 
       chrome.storage.sync.set({
-        'username': username
+        'username': username,
+        'password': password,
+        'server': server,
+        'ssl': ssl
       }, function(result) {
         $('.dsm-info').hide();
         $('.loader').show();
         reloadMain();
-      });
-
-      chrome.storage.sync.set({
-        'password': password
-      });
-      chrome.storage.sync.set({
-        'server': server
-      });
-      chrome.storage.sync.set({
-        'ssl': ssl
       });
     });
 
@@ -78,9 +71,9 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
   function loginAndLoadDSMData(username, password, server, ssl) {
     Synology.authenticate(username, password, server, ssl, function(baseUrl) {
       loadDSMData(baseUrl);
-    }, function(error) {
+    }, function(errorMessage) {
       $('.loader').hide();
-      showError(error);
+      showError((errorMessage) ? errorMessage : chrome.i18n.getMessage("loginError"));
     });
   }
 
@@ -101,44 +94,36 @@ requirejs(["./synology", "vendor/jquery-2.1.4.min", "helper/util", ], function(S
       var diskUsage = infoResult.vol_info[0].used_size / infoResult.vol_info[0].total_size;
       var used_size_mb = Math.trunc(infoResult.vol_info[0].used_size / 1024 / 1024 / 1024);
       var total_size_mb = Math.trunc(infoResult.vol_info[0].total_size / 1024 / 1024 / 1024);
-      $('.dsmdiskspaceused').text(used_size_mb + " / " + total_size_mb + " MB");
-      $('.dsmdiskspace').width(Math.trunc(diskUsage * 100) + '%');
+      $('.dsmdisktext').text(used_size_mb + " / " + total_size_mb + " MB");
 
-      if (diskUsage > 0.7) {
-        $('.dsmdiskspace').addClass('progress-bar-warning');
-      } else if (diskUsage > 0.9) {
-        $('.dsmdiskspace').addClass('progress-bar-danger');
-      }
+      updatePercentageBar('disk', Math.trunc(diskUsage * 100));
 
       var cpuPercentage = entryResult.data.result[1].data.cpu.other_load + entryResult.data.result[1].data.cpu.system_load + entryResult.data.result[1].data.cpu.user_load;
-      $('.dsmcpu').text(cpuPercentage + " %");
-      $('.dsmcpupercentage').width(cpuPercentage + "%");
-
-      if (cpuPercentage > 70) {
-        $('.dsmcpupercentage').addClass('progress-bar-warning');
-      } else if (cpuPercentage > 90) {
-        $('.dsmcpupercentage').addClass('progress-bar-danger');
-      }
+      updatePercentageBar('cpu', cpuPercentage);
 
       var memoryUsage = entryResult.data.result[1].data.memory.real_usage;
-
-      $('.dsmmemory').text(memoryUsage + " %");
-      $('.dsmmemorypercentage').width(memoryUsage + "%");
-
-      if (memoryUsage > 70) {
-        $('.dsmmemorypercentage').addClass('progress-bar-warning');
-      } else if (cpuPercentage > 90) {
-        $('.dsmmemorypercentage').addClass('progress-bar-danger');
-      }
+      updatePercentageBar('memory', memoryUsage);
 
       $('.dsm-info').show();
       $('.loader').hide();
+      
       _gaq.push(['_trackPageview', '/refresh.html']);
 
       setTimeout(loadDSMData, 5000, baseUrl);
     }, function(error) {
       showError(error);
     });
+  }
+
+  function updatePercentageBar(field, fieldValue) {
+    $('.dsm' + field).text(fieldValue + " %");
+    $('.dsm' + field + 'percentage').width(fieldValue + "%");
+
+    if (fieldValue > 70) {
+      $('.dsm' + field + 'percentage').addClass('progress-bar-warning');
+    } else if (fieldValue > 90) {
+      $('.dsm' + field + 'percentage').addClass('progress-bar-danger');
+    }
   }
 
   function logout() {

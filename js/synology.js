@@ -8,12 +8,10 @@ define(["vendor/quickconnectid.min"], function() {
             if (loginResult.success) {
               success(baseUrl)
             } else {
-              error(chrome.i18n.getMessage("loginError"));
-
+              error();
             }
           }).error(function() {
-            error(chrome.i18n.getMessage("loginError"));
-
+            error();
           });
         },
         function(error) {
@@ -34,11 +32,13 @@ define(["vendor/quickconnectid.min"], function() {
           } else {
             error("Error fetching DSM status!");
           }
+        }).error(function() {
+          error("Error fetching DSM info.")
         });
 
+      }).error(function() {
+        error("Error fetching system info.")
       });
-
-
     }
   };
   return Synology;
