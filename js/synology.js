@@ -14,8 +14,8 @@ define(["vendor/quickconnectid.min"], function() {
             error();
           });
         },
-        function(error) {
-          error(error);
+        function(errorMessage) {
+          error(errorMessage);
         });
     },
     startFetchDSMData: function(baseUrl, success, error) {
